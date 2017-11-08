@@ -1,0 +1,218 @@
+@import './../../../assets/stylus/_settings'
+
+.main{
+padding-top: 27%;
+}
+
+.top-div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    text-align: center;
+    img{
+       width: 100%;
+    }
+    .title{
+        letter-spacing: 2px;
+        font-weight: 400;
+        position: relative;
+        bottom: 220px;
+        color: white;
+    }
+     h1{
+        font-size: 42px;
+     }
+}
+.titlePost{
+  font-family: regular-font;
+  color: secondary-color
+  margin-bottom: 0.5em;
+}
+.subTitlePost{
+  color: sub-title-color
+
+}
+.iphoneWithImage{
+  float: right;
+  background-image: url(./../../../assets/images/iphone-video.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  img{
+     width: 90%;
+  }
+
+}
+.play_video{
+  background-image: url(./../../../assets/images/video-play-button.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 6%;
+  height: 23%;
+  border-radius: 50%;
+  position: absolute;
+  top: 38%;
+  right: 14%;
+    &:hover{
+      opacity: 0.9;
+    }
+}
+.imageInThePhone{
+  height: 300px;
+  background-image: url(./../../../assets/images/iphone-video.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.background-primary-color{
+  .titlePost, .subTitlePost{
+    color: #fff;
+  }
+}
+
+
+.first_flag{
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+  img{
+    width:40%;
+    margin-left calc((100% + 20%) / 2);
+    margin-top 6%;
+    -ms-transform: rotate(20deg);
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+  }
+}
+
+.second_flag{
+  -moz-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+  img{
+    width:40%;
+    float right;
+    margin-top 6%;
+    -ms-transform: rotate(20deg);
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+
+  }
+}
+.rocking-the-world{
+  div{
+    height: 255px;
+    background-repeat: no-repeat;
+    background-size: calc(100% - 13px);
+    background-position: center center;
+    &:first-child{
+      margin-left: -7px;
+    }
+    &:last-child{
+      background-size: cover;
+      margin-left: 7px;
+    }
+  }
+  .rocking-the-world1{
+    background-image: url(../../../assets/images/rocking-the-world1.png);
+  }
+  .rocking-the-world2{
+    background-image: url(../../../assets/images/rocking-the-world2.png);
+  }
+  .rocking-the-world3{
+    background-image: url(../../../assets/images/rocking-the-world3.png);
+  }
+}
+ .facts-titles{
+   margin-top: 7%;
+   .titlePost, .subTitlePost{
+     margin-left: 7%;
+   }
+ }
+.facts{
+  img{
+    width: 43px;
+  }
+    .icon-facts{
+      background-repeat: no-repeat;
+      background-size: 38px;
+      background-position: center center;
+      width: 45px;
+      height: 45px;
+      display: inline-block;
+    }
+  .icon-mario{
+    background-image: url(../../../assets/images/icon-mario.svg);
+  }
+  .icon-building{
+    background-image: url(../../../assets/images/icon-building.svg);
+  }
+  .icon-cereal{
+    background-image: url(../../../assets/images/icon-cereal.svg);
+  }
+  .icon-users{
+    background-image: url(../../../assets/images/icon-users.svg);
+  }
+  .icon-airplane{
+    background-image: url(../../../assets/images/icon-airplane.svg);
+  }
+  .icon-waffle{
+    background-image: url(../../../assets/images/icon-waffle.svg);
+  }
+  .el-col-sm-8{
+    margin-left: calc((100% - 80%) / 3);
+  }
+  h1{
+    display: inline-block;
+    margin-right 20px;
+    font-size: 58px;
+    font-weight: bold;
+    color: red-color;
+    margin-bottom: 0px;
+  }
+}
+//=================================================== Media ==========================================================
+
+@media(max-width desktop-breakpoint)
+  .play_video{
+    height: 15%;
+    width: 10%;
+    top: 58%;
+    right: 40%;
+  }
+  .iphoneWithImage{
+    float none;
+    margin-left: calc((100% - 80%) / 2);
+  }
+@media only screen and (max-width:992px){
+  .top-div .title{
+    bottom: 176px;
+  }
+}
+@media only screen and (max-width:600px){
+  .top-div .title{
+    display none;
+  }
+  .play_video {
+    height: calc((100% - 82%) / 2);
+    width: calc((100% - 80%) / 2);
+    top: calc((100% + 52%) / 2);
+    right: calc((100% - 15%) / 2);
+  }
+}
+@media only screen and (max-width:400px){
+  .icon{
+    height: 1.7%;
+  }
+  .play_video {
+    top: calc((100% + 44%) / 2);
+  }
+}

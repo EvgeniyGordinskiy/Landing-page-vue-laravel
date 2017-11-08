@@ -1,0 +1,35 @@
+<header class="flex wrap top-header">
+  <div class="user-details">
+      <div class="logo">
+        <img src="../../../../assets/logo.png">
+      </div>
+  </div>
+  <div class="flex justify-end stretch top-menu">
+    <router-link :to="{path: '' }">influencers</router-link>
+    <router-link :to="{path: '' }">Brands</router-link>
+    <router-link :to="{path: '' }">pricing</router-link>
+    <router-link :to="{path: '' }">the team</router-link>
+    <router-link :to="{path: '' }">search</router-link>
+    <el-button  @click.prevent="logout" size="small"><span class="fa fa-sign-out"></span>Logout</el-button>
+
+
+  </div>
+    <el-menu
+            class="el-menu-demo mobileMenu flex justify-end stretch"
+            mode="horizontal"
+            background-color= #00
+            text-color="#fff"
+            active-text-color="#ffffff">
+      <el-submenu  index="1">
+        <template slot="title">
+          <i class="el-icon-menu"></i>
+        </template>
+        <el-menu-item index="2-1"><router-link :to="{path: '' }">influencers</router-link></el-menu-item>
+        <el-menu-item index="2-2"><router-link :to="{path: '' }">Brands</router-link></el-menu-item>
+        <el-menu-item index="2-3"><router-link :to="{path: '' }">pricing</router-link></el-menu-item>
+        <el-menu-item index="2-4"><router-link :to="{path: '' }">the team</router-link></el-menu-item>
+        <el-menu-item index="2-5"><router-link :to="{path: '' }">search</router-link></el-menu-item>
+        <el-menu-item index="2-5"><router-link :to="{path: '' }">Logout</router-link></el-menu-item>
+      </el-submenu>
+    </el-menu>
+</header>

@@ -1,0 +1,186 @@
+<div>
+    <div class="top-div">
+        <img src="../../../assets/images/content-header.png">
+        <h1 class="title">How about inspiring</h1>
+        <h2 class="title">Unique products require unique teams</h2>
+    </div>
+    <el-row class="margin-block">
+        <el-col :sm="12" :md="12" :lg="12">
+                <h2 class="titlePost text-center">Who we are</h2>
+                <h3 class="subTitlePost text-center"> Re-inverting influencer marketing</h3>
+                <h4 class="text-grey text-center max-width-500px">
+                    We are inzpire.me! Passionate, alive and all with same goal in mind.
+                    Re-crealing the world of influencer marketing is our passion.
+                </h4>
+        </el-col>
+        <el-col :sm="12" :md="12" :lg="12">
+            <svg width="80%" height="auto" class="iphoneWithImage" viewBox="-60 -6.3 480 288">
+                <defs>
+                    <clipPath id="rectView">
+                        <rect width="480" height="278" fill="#FFFFFF" />
+                    </clipPath>
+                </defs>
+                <image width="480" height="278" xlink:href="../../../assets/images/iphone-video.png" clip-path="url(#rectView)" />
+            </svg>
+            <router-link :to="{path: '' }"><div class="play_video"></div></router-link>
+        </el-col>
+    </el-row>
+    <div class="full-width background-gray">
+        <el-row class="text-center ">
+                <h2 class="titlePost text-center">Meeteing the team</h2>
+                <h3 class="subTitlePost text-center">
+                    10 people from all over the world
+                </h3>
+                <h4 class="text-grey text-center max-width-500px">
+                   Our goal is to find people who fit our brand like no one
+                    else can. Believe in the power of working together and help
+                    redefine the influencer marketing world.
+                </h4>
+                <div class="flex stretch wrap el-row">
+                    <cardv v-for="(user, index)user in users" :key="index">
+                        <div class="icon_div">
+                            <svg class="icon">
+                            </svg>
+                        </div>
+                        <img :src="user.img" v-if="user.img" />
+                        <br><br>
+                        <h3 class="cardTitle"> {{ user.name }}</h3>
+                        <label class="cardLabel"></label><span class="cardContent">{{ user.role }}</span>
+                        <br><br>
+                    </cardv>
+                    <el-card class="box-card">
+                        <br><br>
+                        <h3 class="cardTitle">Paul Arnould</h3>
+                        <label class="cardLabel"></label><span class="cardContent">Head of sales</span>
+                        <hr class="short-hr">
+                        <h4 class="el-row line-height">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                            the industry's standard dummy text ever since the 1500s.
+                        </h4>
+                        <br>
+                            <svg class=" icon-music">
+                            </svg>
+                        <br>
+                        <br>
+                    </el-card>
+                </div>
+        </el-row>
+            <div class="background-primary-color">
+                <h2 class="titlePost text-center titleHistory">History in the making</h2>
+                <h3 class="subTitlePost text-center subTitleHistory">
+                    We're a young enthusiastic company who is about to write history.
+                    See how all it started.
+                </h3>
+                <br>
+                <br>
+                <listStepsv
+                :history="history"
+                :addHistory="addHistory"
+                >
+                </listStepsv>
+            </div>
+    </div>
+    <div class="full-width inline-block">
+        <el-col :sm="8" class="first_flag">
+            <img src="../../../assets/images/flags.png">
+        </el-col>
+        <el-col :sm="8" class="margin-block text-center">
+
+            <h4 class="text-grey text-center max-width-500px">
+                We are inzpire.me! Passionate, alive and all with same
+                goal in mind. Re-creating the world of influencer marketing is our passion.
+            </h4>
+            <el-button  type="primary">Ready to join?</el-button>
+        </el-col>
+        <el-col :sm="8" class="second_flag">
+            <img src="../../../assets/images/flags.png">
+        </el-col>
+        <el-row class="rocking-the-world full-width inline-block ">
+            <el-col :sm="8" class="rocking-the-world1">
+            </el-col>
+            <el-col :sm="8" class="rocking-the-world2">
+            </el-col>
+            <el-col :sm="8" class="rocking-the-world3">
+            </el-col>
+        </el-row>
+    </div>
+   <el-row class="facts-titles">
+       <h2 class="titlePost">Awesome facts about us</h2>
+       <h3 class="subTitlePost">
+           Totally random but crazy awesome
+       </h3>
+       <br>
+       <br>
+   </el-row>
+    <el-row :lg="6" class="facts flex justify-center">
+            <el-col :sm="8" class="">
+                <el-col :sm="24">
+                    <div class="icon-facts icon-building"></div><h1>86</h1>
+                </el-col>
+                <el-col :sm="24" >
+                    Stairs to our Oslo penthouse office super view
+                </el-col>
+            </el-col>
+            <el-col :sm="8" class="">
+                <el-col  :sm="24">
+                    <div class="icon-facts icon-mario"></div><h1>5</h1>
+                </el-col>
+                <el-col :sm="24">
+                    Super Nintendo games (Super Mario World 4 the win!)
+                </el-col>
+            </el-col>
+            <el-col :sm="8" class="">
+                <el-col  :sm="24">
+                    <div class="icon-facts icon-cereal"></div><h1>3</h1>
+                </el-col>
+                <el-col :sm="24">
+                    Three magical cereal dispensors (you go Mats & Marie!)
+                </el-col>
+            </el-col>
+    </el-row>
+    <br>
+    <el-row :lg="6" class="facts flex justify-center">
+
+        <el-col :sm="8" class="">
+                <el-col  :sm="24">
+                    <div class="icon-facts icon-users"></div><h1>379m</h1>
+                </el-col>
+                <el-col :sm="24">
+                    Followers to our cool and unique platform
+                </el-col>
+            </el-col>
+            <el-col :sm="8" class="">
+                <el-col  :sm="24">
+                    <div class="icon-facts icon-airplane"></div><h1>2</h1>
+                </el-col>
+                <el-col :sm="24">
+                    Team holidays a year traveling around the cool world
+                </el-col>
+            </el-col>
+            <el-col :sm="8" class="">
+
+                <el-col  :sm="24">
+                    <div class="icon-facts icon-waffle"></div><h1>52</h1>
+                </el-col>
+                <el-col :sm="24">
+                    Every week is waffle friday! Waffles with brown cheese!
+                 </el-col>
+            </el-col>
+    </el-row>
+    <div class="background-primary-color el-row full-width margin-block flex justify-center">
+        <el-col :sm="15">
+            <div>
+                <h2 class="titlePost text-center">History in the making</h2>
+                <h3 class="subTitlePost text-center max-width-500px">
+                    We're a young enthusiastic company who is about to write history.
+                    See how all it started.
+                </h3>
+            </div>
+
+        </el-col>
+        <el-col :sm="1">&nbsp;</el-col>
+        <el-col :sm="8">
+            <el-button>SIGN UP NOW  &nbsp;&nbsp;<i class="el-icon-check el-icon-right"></i></el-button>
+        </el-col>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<div>
+    <div class="flex justify-center" v-for="(item, index) in history" :key="index" v-if="index % 2 === 0">
+        <el-col :sm="5" :lg="5" class="history_event">
+            <el-col :sm="3" :style="{ backgroundImage: 'url(' + item.img + ')' }" class="history-event-image">
+                <!--<img :src="item.img">-->
+            </el-col>
+            <el-col :sm="21">
+                <p class="titlePost text-center max-width-94p">{{item.title}}</p>
+                <p class="subTitlePost text-center max-width-94p">
+                    {{item.subTitle}}
+                </p>
+                <p class="text-grey text-center max-width-94p description">
+                    {{item.description}}
+                </p>
+            </el-col>
+        </el-col>
+        <el-col :sm="17" :lg="2" class="text-center">
+            <div :class="{'checkpoint': index == 0, 'checkpoint_right': index != 0,}"></div>
+        </el-col>
+        <el-col :sm="17" :lg="5">
+            <p class="eventsDate">
+                {{item.date}}
+            </p>
+        </el-col>
+    </div>
+    <div class="flex justify-center" v-else>
+        <el-col :sm="17" :lg="5">
+            <p class="eventsDate_right">{{item.date}}</p>
+        </el-col>
+        <el-col :sm="17" :lg="2" class="text-center">
+            <div class="checkpoint_right"></div>
+        </el-col>
+        <el-col :sm="5" :lg="5" class="history_event history_event_right">
+            <el-col :sm="21">
+                <p class="titlePost text-center max-width-94p">{{item.title}}</p>
+                <p class="subTitlePost text-center max-width-94p">
+                    {{item.subTitle}}
+                </p>
+                <p class="text-grey text-center max-width-94p description">
+                    {{item.description}}
+                </p>
+            </el-col>
+            <el-col :sm="3" :style="{ backgroundImage: 'url(' + item.img + ')' }" class="history-event-image">
+                <!--<img :src="item.img">-->
+            </el-col>
+        </el-col>
+
+    </div>
+    <div class="flex justify-center">
+        <el-col :sm="17" :lg="2" class="text-center">
+            <div class="add-more-history" @click="addHistory">SEE MORE HISTORY</div>
+        </el-col>
+    </div>
+</div>
